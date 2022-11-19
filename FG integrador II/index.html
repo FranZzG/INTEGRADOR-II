@@ -1,0 +1,209 @@
+<!-- Hola profes! Francisco les habla. Paso a comentarles un poco mi projecto.Se trata de un
+ecommerce de una dietetica.Decidi optar por colores no tan tradicionales tipicos de estos
+locales u paginas. En vez de que sea colores naturales, decidi agarrar gustos personales,
+y ademas colores que esten relacionados con el logo de la page.
+Comence un poco atrasado por motivos familiares, mudanzas,etc... pero siento que hice un
+buen trabajo.
+Me gusto bastante el modelo en cual Nelson y Matias nos han explicado, sobre la venta de NFTS.
+Asi que decidi hacer algo similar, pero obviamente con sus cambios.
+Ademas de que poco a poco me guiaba por lo que decian ellos en sus clases, recomendaciones,etc.
+Solo no pude encontrar una solucion a mi problema en la seccion de categorias.
+Al guiarme por las explicaciones coloque mal los nombres de los catalogos y al querer cambiarlos
+no funcionaba. No solo cambiandolo en el html, sino que en los js y si era necesario, en los css.
+Asi que en el codigo encontraran nombres que no tienen nada que ver con los contenidos de los
+catalogos.
+Pero que en la pagina principal se muestra tal cual.
+Luego, tuve varios problemas con las medidas en movil, se me rompia todo. Pero aprueba
+y error se pudo.Lo que no entendia lo busque tanto por intenet como en las clases grabadas.
+Asi que nada, estamos en contacto y ahora a seguir con REACT. saludos!
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dietetica Cuidado Azul</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/icon.png" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/mediaqueries.css" />
+  <link rel="stylesheet" href="./assets/animaciones.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <img src="./assets/img/logo.png" alt="Logo Dietetica Cuidado Azul" class="logo" />
+    <nav class="navbar">
+      <div class="menu-label">
+        <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+      </div>
+
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#hero">Inicio</a></li>
+        <li><a class="navbar-link" href="#discover">Datos</a></li>
+        <li><a class="navbar-link" href="#products">Productos</a></li>
+
+        <li>
+          <a href="#" target="_blank">Ver Mas</a>
+        </li>
+      </ul>
+
+      <div class="cart-label">
+        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      </div>
+
+      <div class="cart">
+        <h2>Tus Productos</h2>
+
+        <div class="cart-container"></div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">0,00$</span>
+        </div>
+        <button class="btn-buy">Hacer Compra</button>
+        <button class="btn-delete">Descartar Productos</button>
+      </div>
+
+      <div class="overlay"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section id="hero">
+      <div class="hero-info">
+        <h1>EL BIENESTAR ES <span>PRIMORDIAL</span></h1>
+        <p>
+          Junto a nuestros profesionales, estamos dispuestos
+          a satisfacer sus necesidades a la hora de querer
+          tener un cambio beneficioso en su vida a costa
+          de productos seleccionados,recomendaciones y sobre todo,
+          <span>calidad precio!</span>
+        </p>
+        <a href="#info">Saber mas</a>
+      </div>
+      <div class="hero-card">
+        <img src="./assets/img/hero/user.jpg" alt="BTC de ejemplo" />
+        <div class="hero-card-info">
+          <div class="hero-card-top">
+            <h3>"FranZzG"</h3>
+            <span>user</span>
+          </div>
+          <div class="hero-card-bottom">
+            <div class="hero-card-creator">
+              <img src="./assets/img/hero/icon.png" alt="Imagen ilustrada" />
+              <div class="creator-info">
+                <p>Usuario</p>
+                <p>Francisco Godoy</p>
+              </div>
+            </div>
+            <div class="hero-card-price">
+              <p>Productos:</p>
+              <span>45</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info -->
+    <section id="info">
+      <h2>BENEFICIOS A LA HORA DE HACER CAMBIOS EN LA ALIMENTACION</h2>
+      <div class="info-cards-container">
+        <div class="info-card">
+          <h3>Salud:</h3>
+          <p>
+            A las industrias les renta mucho sacar productos baratos,
+            simples, y delisiosos, cuando en realidad lo u
+            estan haciendo es que tu cuerpo vaya teniendo dificultades
+            con el paso del tiempo.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3> Disciplina</h3>
+          <p>
+            Cuando uno comienza este camino, es dificil al comienzo... es logico.
+            Pero cuando poco a poco notas mejorias, es ahi donde todo haya valido la
+            pena.No solo te cambia fisicamente, sino que tu mente estara mas
+            tranquila!.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>Ricuras!</h3>
+          <p>
+            Quien te ha dicho que solo debes estar a base de plantas y agua?
+            Comidas dulces,saladas, lo que piensas, siempre tendra su vercion
+            saludable. ( menos en lo frito, eso significa peligro y es mucho
+            muy importante! ) .
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- discover -->
+    <section id="discover">
+      <!-- discover info text -->
+      <div class="discover-info">
+        <h2>Variedad de productos! </h2>
+        <div class="discover-text">
+          <p>
+            Estos ingredientes junto con mucha pasciencia y sobre todo buena mano, haran que saques platillos riquisimos a un costo economico. Sin olvidar que ayudas a tu cuerpo tener ingresos de alimentos variados y saludables!
+          </p>
+          <a href="#">Vamos a Darle!</a>
+        </div>
+      </div>
+
+      <!-- discover cards -->
+      <div class="discover-cards">
+        <img src="./assets/img/discover/barras.jpg" alt="darth vader" />
+        <img src="./assets/img/discover/frutilla.jpg" alt="trooper" />
+        <img src="./assets/img/discover/integral.jpg" alt="yoda" />
+      </div>
+    </section>
+    <!-- products -->
+    <section id="products">
+      <h2>VARIABLES!</h2>
+      <!-- categories -->
+      <div class="categories">
+        <button class="category active">All's !</button>
+        <button class="category" data-category="futbol">Harinas</button>
+        <button class="category" data-category="musica">Endulsantes</button>
+        <button class="category" data-category="peliculas">
+          Dulces
+        </button>
+        <button class="category" data-category="autos">Verduras</button>
+        <button class="category" data-category="politicos">
+          ️Frutillas
+        </button>
+      </div>
+
+      <!-- products -->
+      <div class="products-container"></div>
+      <button class="btn-load">Ver Más</button>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">Términos de Uso</a></li>
+        <li><a href="#">Contactanos</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+    <p>Creado por<span>Francisco Godoy</span></p>
+  </footer>
+  <div class="add-modal"></div>
+  <script src="./assets/data.js"></script>
+  <script src="./assets/index.js"></script>
+</body>
+
+</html>
